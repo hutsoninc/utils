@@ -1,0 +1,69 @@
+{
+  "name": "@hutsoninc/utils",
+  "version": "1.0.0",
+  "description": "Hutson marketing team utility belt",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "pretest": "npm run lint",
+    "test": "jest"
+  },
+  "author": {
+    "name": "AustinLeeGordon",
+    "email": "gordon.austin2@gmail.com",
+    "url": "http://www.austinleegordon.com"
+  },
+  "dependencies": {
+    "json2csv": "^4.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-xo": "^0.25.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.3.0",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "warn"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hutsoninc/utils"
+  },
+  "license": "MIT"
+}
