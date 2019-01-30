@@ -8,7 +8,7 @@ const xml2js = require("xml2js");
  * @returns {json}
  */
 
-function xmlToJson(xml, opts) {
+function xmlToJson(xml, opts = {}) {
   return new Promise((resolve, reject) => {
     xml2js.parseString(xml, opts, (err, res) => {
       if (err) return reject(err);

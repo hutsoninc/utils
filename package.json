@@ -15,6 +15,7 @@
     "url": "http://www.austinleegordon.com"
   },
   "dependencies": {
+    "csvtojson": "^2.0.8",
     "json2csv": "^4.3.3",
     "xml2js": "^0.4.19"
   },
