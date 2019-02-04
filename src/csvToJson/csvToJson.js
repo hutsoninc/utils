@@ -4,7 +4,7 @@ const csv = require("csvtojson/v2");
  * Converts a CSV string to JSON
  * @public
  * @param {string} str CSV to be converted
- * @param {object} opts Options for xml2js parser
+ * @param {object} opts Options for parser
  * @returns {json}
  */
 
