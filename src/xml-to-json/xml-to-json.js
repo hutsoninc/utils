@@ -12,7 +12,7 @@ function xmlToJson(xml, opts = {}) {
   return new Promise((resolve, reject) => {
     xml2js.parseString(xml, opts, (err, res) => {
       if (err) return reject(err);
-      resolve(JSON.stringify(res));
+      resolve(res);
     });
   });
 }

@@ -1,7 +1,7 @@
-const csvToJson = require("./csvToJson/csvToJson");
-const delay = require("./delay/delay");
-const jsonToCsv = require("./jsonToCsv/jsonToCsv");
-const xmlToJson = require("./xmlToJson/xmlToJson");
+const csvToJson = require("./csv-to-json");
+const delay = require("./delay");
+const jsonToCsv = require("./json-to-csv");
+const xmlToJson = require("./xml-to-json");
 
 module.exports = {
   csvToJson,
